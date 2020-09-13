@@ -155,8 +155,6 @@ I'm currently using Dispatchlib as part of another larger project. Dispatchlib e
 
 When this message is no longer here, consider the module more stable.
 
-I'm interested to
-
 ### Todo
 
 - create `dispatchmethod` akin to singledispatchmethod.

@@ -21,6 +21,7 @@ setup(
     author_email='ryxcommar@gmail.com',
     description='Tools for creating dispatchable functions.',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     py_modules=['dispatchlib'],
     license='MIT',
     python_requires='>=3.6',
