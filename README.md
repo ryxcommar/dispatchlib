@@ -9,7 +9,7 @@ Dispatchlib is a metaprogramming library for creating single-dispatched generic 
 
 Dispatchlib's `dispatch` decorator is not a strict superset of `functools.singledispatch`. There are a few things in `functools.singledispatch` that are not here:
 
-- `dispatchlib.dispatch` requires that you always call the register decorator like this: `@f.regsiter()` whereas `functools.singledispatch`. The reason why is because `dispatchlib.dispatch` can dispatch not just based on types but also based on functions , so the first arg in the `register` decorator being a function is not sufficient to conclude whether it's being called or not prior to decoration.
+- `dispatchlib.dispatch` requires that you always call the register decorator like this: `@f.regsiter()` whereas `functools.singledispatch` supports `@f.resgister`. The reason why is because `dispatchlib.dispatch` can dispatch not just based on types but also based on generic callables, so the first arg in the `register` decorator being a function is not sufficient to conclude whether it's being called or not prior to wrapping the user-defined implementation for the generic function.
 - `functools.singledispatch` supports dynamic polymorphism using `__mro__`, whereas `dispatchlib.dispatch` dispatches based on running a check for each overloaded implementation; by default, checks are run in FIFO order, with the exception of the "base" function, which is always run last.
 - `functools.singledispatch` is faster.
 
